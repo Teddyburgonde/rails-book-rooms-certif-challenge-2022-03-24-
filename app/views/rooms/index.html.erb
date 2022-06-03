@@ -1,0 +1,12 @@
+<div class="container-index">
+<h1 style="font-size: 3.0rem; color: #6BCB77; font-weight: bold;">Les chambres </h1>
+<% @rooms.each do |room| %>
+  <h2 style="color:#0014ff;font-size: 2rem; font-weight: bold;"><%= room.price_per_night %></h2>
+  <p style="font-size: 1.7rem; color: #E04DB0; font-weight: bold;"><%= room.capacity %></p>
+  <%= link_to "Voir", room_path(room)%>
+  <br>
+    <%= link_to "Reserver", room_bookings_path(room)%>
+  <br>
+  <%= link_to "Retour à la page d'accueil", root_path %>
+<% end %>
+</div>
